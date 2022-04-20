@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Fuse Plus</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="ResearchFPIndustrialBreaker"]/label</xpath>
+						<value>
+              <label>spacer circuit breaker</label>
+            </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="ResearchFPIndustrialBreaker"]/description</xpath>
+          <value>
+            <description>Allows building spacer-tech circuit breakers capable of protecting you from a powerful electric discharge.</description>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="ResearchFPIndustrialBreaker"]/techLevel</xpath>
+          <value>
+            <techLevel>Spacer</techLevel>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ResearchProjectDef[defName="ResearchFPIndustrialBreaker"]</xpath>
+          <value>
+            <requiredResearchFacilities>
+              <li>MultiAnalyzer</li>
+            </requiredResearchFacilities>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ResearchProjectDef[defName="ResearchFPGWBreaker"]</xpath>
+          <value>
+            <requiredResearchFacilities>
+              <li>MultiAnalyzer</li>
+            </requiredResearchFacilities>
+          </value>
+        </li>
+        
+      </operations>
+    </match>
+  </Operation>
+</Patch>
